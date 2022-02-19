@@ -1,3 +1,6 @@
+2022.02.19:
+* new: action.yml: added `commit_message_insert_time` input optional parameter and use `COMMIT_MESSAGE_DATE_TIME_PREFIX` instead of `STATS_DATE_UTC`
+
 2022.02.17:
 * new: `README.md` readme file
 * new: `changelog.txt` changelog file
