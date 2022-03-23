@@ -2,5 +2,9 @@
 
 > :warning: to find all changes use [changelog.txt](https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/blob/master/changelog.txt) file in a directory
 
+## 2022.03.23:
+* new: action.yml: `env` input parameter to explicitly declare global environment variables
+* new: action.yml: `changelog_dir` variable usage is added
+
 ## 2022.02.19:
 * new: action.yml: added `commit_message_insert_time` input optional parameter and use `COMMIT_MESSAGE_DATE_TIME_PREFIX` instead of `STATS_DATE_UTC`
