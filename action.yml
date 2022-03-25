@@ -113,15 +113,17 @@ runs:
     - name: declare variables from lists
       shell: bash
       run: |
-        $GH_WORKFLOW_ROOT/bash/github/set-env-from-args.sh ${{ inputs.env }}
+        $GH_WORKFLOW_ROOT/bash/github/set-env-from-args.sh \
+          ${{ inputs.env }}
 
     - name: declare local variables
       shell: bash
       run: |
-        echo "changelog_dir=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}" >> $GITHUB_ENV
-        echo "stats_dir=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}" >> $GITHUB_ENV
-        echo "stats_json=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}/latest.json" >> $GITHUB_ENV
-        echo "commit_message_insert_time=${{ inputs.commit_message_insert_time }}" >> $GITHUB_ENV
+        $GH_WORKFLOW_ROOT/bash/github/set-env-from-args.sh \
+          "changelog_dir=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}" \
+          "stats_dir=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}" \
+          "stats_json=$GITHUB_WORKSPACE/gh-stats/${{ inputs.output_repo_dir }}/latest.json" \
+          "commit_message_insert_time=${{ inputs.commit_message_insert_time }}"
 
     - name: allocate directories
       shell: bash
@@ -152,12 +154,12 @@ runs:
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/${{ inputs.stat_entity_path }} \
           > "$stats_json"
+        cat "$stats_json"
 
     - name: accumulate ${{ inputs.stat_entity_path }}
       id: accum-stats
       shell: bash
       run: |
-        cat "$stats_json"
         $GH_WORKFLOW_ROOT/bash/github/accum-rate-limits.sh
         # caution: no operation after that line if non zero exit code happens above
 
