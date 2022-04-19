@@ -75,7 +75,7 @@ Tutorial to use with: https://github.com/andry81-devops/github-accum-stats</h4>
 
 ## Examples:
 
-`.github/workflows/accum-gh-rate-limits.yml`:
+<a name="accum-gh-rate-limits-yml">`.github/workflows/accum-gh-rate-limits.yml`</a>:
 
 ```yml
 name: GitHub rate limits at every 8 hours accumulator
@@ -122,19 +122,19 @@ jobs:
 
 > :warning: You must use different values for `deps_repo_owner` and `output_repo_owner` if there is actually different owners.
 
-> :information_source: See <a href="https://github.com/andry81-devops/github-accum-stats/blob/master/README.md#reuse">REUSE</a> section for details if you have multiple repositories and want to store all workflow scripts in a single repository.
+> :information_source: See <a href="https://github.com/andry81-devops/github-accum-stats#reuse">REUSE</a> section for details if you have multiple repositories and want to store all GitHub workflow scripts (`.github/workflows/*.yml`) in a single repository.
 
 ## <a name="dependecies">Dependencies</a>
 
 * https://github.com/andry81-devops/gh-workflow
 
-## <a name="known_issues">Known Issues</a>
+## Known Issues
 
-https://github.com/andry81-devops/github-accum-stats/blob/master/README.md#known_issues
+https://github.com/andry81-devops/github-accum-stats#known-issues
 
-## <a name="known_issues_updates">Last known updates on composite actions features</a>
+## Last known issues updates
 
-https://github.com/andry81-devops/github-accum-stats/blob/master/README.md#known_issues_updates
+https://github.com/andry81-devops/github-accum-stats#last-known-issues-updates
 
 ## <a name="copyright-and-license">Copyright and License</a>
 
