@@ -106,8 +106,10 @@ jobs:
           deps_repo_read_token:     ${{ github.token }}
 
           stat_owner:               {{REPO_OWNER}}
-          stat_entity_path:         rate_limit
+          stat_entity:              rate_limit
           stat_read_token:          ${{ secrets.READ_STATS_TOKEN }}
+
+          #commit_msg_entity:        rt
 
           curl_flags: >-
             -H 'Cache-Control: no-cache'
