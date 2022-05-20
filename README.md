@@ -76,7 +76,7 @@ Tutorial to use with: https://github.com/andry81-devops/github-accum-stats</h4>
 
 # USAGE
 
-> :warning: You must replace all placeholder into respective values:
+> **Warning** You must replace all placeholder into respective values:
 
 * `{{REPO_OWNER}}` -> repository owner
 * `{{REPO}}` -> your repository
@@ -129,11 +129,11 @@ jobs:
           #  CHANGELOG_FILE=changelog.txt
 ```
 
-> :information_source: You can use `secrets.READ_STATS_TOKEN` instead of `secrets.WRITE_STATS_TOKEN` as long as there is the same owner.
+> **Note** You can use `secrets.READ_STATS_TOKEN` instead of `secrets.WRITE_STATS_TOKEN` as long as there is the same owner.
 
-> :warning: You must use different values for `deps_repo_owner`, `stat_owner` and `output_repo_owner` if there is actually different owners.
+> **Warning** You must use different values for `deps_repo_owner`, `stat_owner` and `output_repo_owner` if there is actually different owners.
 
-> :information_source: See <a href="https://github.com/andry81-devops/github-accum-stats#reuse">REUSE</a> section for details if you have multiple repositories and want to store all GitHub workflow scripts (`.github/workflows/*.yml`) in a single repository.
+> **Note** See <a href="https://github.com/andry81-devops/github-accum-stats#reuse">REUSE</a> section for details if you have multiple repositories and want to store all GitHub workflow scripts (`.github/workflows/*.yml`) in a single repository.
 
 ## <a name="dependecies">Dependencies</a>
 
