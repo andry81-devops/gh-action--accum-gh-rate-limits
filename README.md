@@ -83,8 +83,6 @@ All tutorials: https://github.com/andry81/index#tutorials
 
 * Can print GitHub Actions Run URL (with workflow run number) into the changelog file to reference the log on the GitHub from the changelog file (`ENABLE_GITHUB_ACTIONS_RUN_URL_PRINT_TO_CHANGELOG=1`)
 
-* Can print Commit Reference URL into the changelog file to reference a commit on the GitHub from the changelog file (`ENABLE_COMMIT_REFERENCE_URL_PRINT_TO_CHANGELOG=1`)
-
 # USAGE
 
 > **Warning** You must replace all placeholder into respective values:
@@ -141,7 +139,6 @@ jobs:
             ENABLE_COMMIT_MESSAGE_DATE_WITH_TIME=1            # insert the time string in format HH:MMZ additionally after the date in each commit message
             ENABLE_COMMIT_MESSAGE_WITH_WORKFLOW_RUN_NUMBER=1  # insert the workflow run number after date/time prefix in each commit message
             ENABLE_GITHUB_ACTIONS_RUN_URL_PRINT_TO_CHANGELOG=1
-            ENABLE_COMMIT_REFERENCE_URL_PRINT_TO_CHANGELOG=1
           #  CHANGELOG_FILE=changelog.txt
 ```
 
