@@ -43,8 +43,8 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/blob/master/userlog.md">Userlog</a>
-• <a href="https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/blob/master/changelog.txt">Changelog</a>
+  <a href="https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/tree/HEAD/userlog.md">Userlog</a>
+• <a href="https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/tree/HEAD/changelog.txt">Changelog</a>
 • <a href="#dependecies">Dependencies</a>
 • <a href="#known-issues">Known issues</a>
 • <a href="#copyright-and-license"><img src="https://github.com/andry81-cache/gh-content-static-cache/raw/master/common/badges/license/mit-license.svg" valign="middle" alt="copyright and license" />&nbsp;Copyright and License</a>
@@ -65,7 +65,7 @@ All tutorials: https://github.com/andry81/index#tutorials
 * You may directly point the statistic as commits list:
   `https://github.com/{{REPO_OWNER}}/{{REPO}}--gh-stats/commits/master/traffic/rate/limits`
 
-* Workflow is used [accum-rate-limits.sh](https://github.com/andry81-devops/gh-workflow/blob/master/bash/github/accum-rate-limits.sh) bash script to accumulate rate limits statistic
+* Workflow is used [accum-rate-limits.sh](https://github.com/andry81-devops/gh-workflow/tree/HEAD/bash/github/accum-rate-limits.sh) bash script to accumulate rate limits statistic
 
 * The script accumulates statistic both into a single file and into a set of files grouped by year and allocated per day:
   `traffic/rate/limits/by_year/YYYY/YYYY-MM-DD.json`
@@ -82,6 +82,11 @@ All tutorials: https://github.com/andry81/index#tutorials
 * Can insert the workflow run number after date/time prefix in each commit message (by default does not insert for shorter commit messages; `ENABLE_COMMIT_MESSAGE_WITH_WORKFLOW_RUN_NUMBER=1`)
 
 * Can print GitHub Actions Run URL (with workflow run number) into the changelog file to reference the log on the GitHub from the changelog file (`ENABLE_GITHUB_ACTIONS_RUN_URL_PRINT_TO_CHANGELOG=1`)
+
+* Can print Statistic Output Repository commit URL into the changelog file to reference the commit from being committed changelog file (`ENABLE_REPO_STATS_COMMITS_URL_PRINT_TO_CHANGELOG=1`)
+
+  > **Note** The actual hash of the commit can not be know on the moment of the commit. So instead of the commit hash, an approximate date of the commit is used (~ +5 min ahead) in format of:
+  > `https://github.com/{{REPO_OWNER}}/{{REPO}}--gh-stats/commits?branch={{BRANCH}}&until=YYYY-MM-DD`
 
 # USAGE
 
@@ -139,6 +144,7 @@ jobs:
             ENABLE_COMMIT_MESSAGE_DATE_WITH_TIME=1            # insert the time string in format HH:MMZ additionally after the date in each commit message
             ENABLE_COMMIT_MESSAGE_WITH_WORKFLOW_RUN_NUMBER=1  # insert the workflow run number after date/time prefix in each commit message
             ENABLE_GITHUB_ACTIONS_RUN_URL_PRINT_TO_CHANGELOG=1
+            ENABLE_REPO_STATS_COMMITS_URL_PRINT_TO_CHANGELOG=1
           #  CHANGELOG_FILE=changelog.txt
 ```
 
@@ -162,4 +168,4 @@ https://github.com/andry81-devops/github-accum-stats#last-known-issues-updates
 
 ## <a name="copyright-and-license">Copyright and License</a>
 
-Code and documentation copyright 2022 Andrey Dibrov. Code released under [MIT License](https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/blob/master/license.txt)
+Code and documentation copyright 2022 Andrey Dibrov. Code released under [MIT License](https://github.com/andry81-devops/gh-action--accum-gh-rate-limits/tree/HEAD/license.txt)
