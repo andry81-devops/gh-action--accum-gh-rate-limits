@@ -50,9 +50,9 @@
 • <a href="#copyright-and-license"><img src="https://github.com/andry81-cache/gh-content-static-cache/raw/master/common/badges/license/mit-license.svg" valign="middle" alt="copyright and license" />&nbsp;Copyright and License</a>
 </p>
 
-<h4 align="center">GitHub composite action to request and accumulate an account rate limits.<br/>
-<br/>
-Tutorial to use with: https://github.com/andry81-devops/github-accum-stats</h4>
+<h4 align="center">GitHub composite action to request and accumulate an account rate limits.</h4>
+
+Tutorial to use with: https://github.com/andry81-devops/github-accum-stats
 
 All tutorials: https://github.com/andry81/index#tutorials
 
@@ -90,12 +90,14 @@ All tutorials: https://github.com/andry81/index#tutorials
 * `ENABLE_REPO_STATS_COMMITS_URL_PRINT_TO_CHANGELOG=1`:
   Prints Statistic Output Repository commit URL into the changelog file to reference the commit from being committed changelog file.
 
-  > **Note** The actual hash of the commit can not be know on the moment of the commit. So instead of the commit hash, an approximate date of the commit is used (~ +5 min ahead) in format of:
+  > [!NOTE]
+  > The actual hash of the commit can not be know on the moment of the commit. So instead of the commit hash, an approximate date of the commit is used (~ +5 min ahead) in format of:
   > `https://github.com/{{REPO_OWNER}}/{{REPO}}--gh-stats/commits?branch={{BRANCH}}&time_zone=utc&until=YYYY-MM-DD`
 
 # USAGE
 
-> **Warning** You must replace all placeholder into respective values:
+> [!WARNING]
+> You must replace all placeholder into respective values:
 
 * `{{REPO_OWNER}}` -> repository owner
 * `{{REPO}}` -> your repository
@@ -154,11 +156,14 @@ jobs:
           #  CHANGELOG_FILE=changelog.txt
 ```
 
-> **Note** You can use `secrets.READ_STATS_TOKEN` instead of `secrets.WRITE_STATS_TOKEN` as long as there is the same owner.
+> <!NOTE]
+> You can use `secrets.READ_STATS_TOKEN` instead of `secrets.WRITE_STATS_TOKEN` as long as there is the same owner.
 
-> **Warning** You must use different values for `deps_repo_owner`, `stat_owner` and `output_repo_owner` if there is actually different owners.
+> [!WARNING]
+> You must use different values for `deps_repo_owner`, `stat_owner` and `output_repo_owner` if there is actually different owners.
 
-> **Note** See <a href="https://github.com/andry81-devops/github-accum-stats#reuse">REUSE</a> section for details if you have multiple repositories and want to store all GitHub workflow scripts (`.github/workflows/*.yml`) in a single repository.
+> [!NOTE]
+> See <a href="https://github.com/andry81-devops/github-accum-stats#reuse">REUSE</a> section for details if you have multiple repositories and want to store all GitHub workflow scripts (`.github/workflows/*.yml`) in a single repository.
 
 ## Dependencies
 
